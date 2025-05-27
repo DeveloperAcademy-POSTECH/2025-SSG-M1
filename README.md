@@ -8,7 +8,7 @@ Obsidian을 활용하여 학습한 내용을 Markdown 노트로 기록하고, Gi
 <img width="1300" alt="image" src="https://github.com/user-attachments/assets/ee53a167-bd0a-4656-822b-a3548ac28a9d" />
 
 ### 👥 Team Member
-+ @luminouxx
++ @llj72
 + @Noah-1004
 + @luminouxx
 + @luminouxx
