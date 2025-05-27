@@ -11,7 +11,7 @@ Obsidian을 활용하여 학습한 내용을 Markdown 노트로 기록하고, Gi
 + @llj72
 + @Noah-1004
 + @shinmingyu
-+ @luminouxx
++ @uvo36
 + @Fine
 
 - 그룹장은 매주 돌아가며 변경될 수 있으며, 새로운 주차마다 학습 주제를 지정할 수 있습니다.
