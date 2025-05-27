@@ -9,7 +9,7 @@ Obsidian을 활용하여 학습한 내용을 Markdown 노트로 기록하고, Gi
 
 ### 👥 Team Member
 + @luminouxx
-+ @luminouxx
++ @Noah-1004
 + @luminouxx
 + @luminouxx
 + @luminouxx
