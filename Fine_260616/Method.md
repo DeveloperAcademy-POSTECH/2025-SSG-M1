@@ -43,12 +43,12 @@ struct Person {
 | 함수     | 아무데나 가능        | 이름()       | greet(name: "민수")            |
 | 메서드    | 타입(struct 등) 안 | 타입.이름()    | person.greet() (person은 구조체) |
 
-# 언제 사용하나?
+## 언제 사용하나?
 * 버튼을 누를 때 - 클릭하면 어떤 동작을 하도록 만들기 위해
 * 애니메이션 줄 때 - 값 바꾸고 애니메이션도 같이 실행하기 위해
 * 값 계산할 때 - 똑같은 계산을 반복하지 않고 재사용하기 위해
 * 뷰 업데이트 - 값이 바뀌면 화면도 바뀌게 연결할 수 있음.
-# Method 기본 문법
+## Method 기본 문법
 1. 정의하기 (func로 선언)
 	func Method이름(매개변수: 타입)-> 리턴타입 {
     // 실행할 코드
@@ -133,6 +133,7 @@ Swift 예약어는 피해야 해요. 보통 소문자로 시작하고 동사 형
 **Q.** 메서드 안에서 다른 메서드 부를 수 있어요?
 당연해요! 메서드끼리 서로 호출하며 큰 동작을 나눌 수 있어요.
 
+---
 # **✅ Swift에서 메서드와 비슷한 역할을 하는 것들**
 
 | **종류**                            | **설명**                          |
@@ -151,6 +152,7 @@ func add(a: Int, b: Int) -> Int {
 let result = add(a: 3, b: 4)  // result = 7
 - 함수는 **클래스나 구조체 안에 없어도** 정의 가능
 - 메서드는 특정 타입에 묶여 있는 함수
+
 ## **2️⃣ 클로저 (Closure) – 이름 없는 작은 함수**
 let sayHi = {
     print("안녕!")
@@ -237,6 +239,7 @@ struct WordList {
 - **배열처럼 쓰이도록 만든 함수**
 - 위의 예에서 words는 배열이지만, WordList는 배열이 아님. => WordList()[0] => 에러남. 
 - subscript를 써서 WordList가 배열처럼 동작함.
+
 ## **5️⃣ 연산자 오버로딩 – 연산자를 함수처럼 정의하기**
  **struct** Point {
      **var** x: Int
@@ -280,3 +283,84 @@ A. 물론이죠! static func - (...) -> Point 도 만들 수 있어요.
 
 **Q.** Swift가 왜 이렇게 연산자까지 만들 수 있게 해놨어요?
 A. 숫자뿐만 아니라 구조체나 벡터, 좌표, 돈, 색상 등 **자연스럽게 더하고 빼고 비교**할 수 있게 하려고요.
+
+---
+# isMultiplu(of: )
+
+Q. isMultiple(of: ) 과 비슷한 연산 메소드가 뭐가 있나요?
+A. Swift의 BinaryInteger 프로토콜에서 제공하는 숫자나 컬렉션 등에 사용되는 의미 기반의 연산 메서드
+
+✅ 숫자와 관련된 연산 메서드들
+
+1. isMultiple(of:)  
+    • 어떤 수가 특정 수의 배수인지 확인  
+    `10.isMultiple(of: 5) // true`
+    
+2. truncatingRemainder(dividingBy:)  
+    • 실수(FloatingPoint)에서 나머지를 구할 때  
+    `8.5.truncatingRemainder(dividingBy: 3.0) // 2.5`
+    
+3. quotientAndRemainder(dividingBy:)  
+    • 몫과 나머지를 한꺼번에 튜플로 반환
+let result = 10.quotientAndRemainder(dividingBy: 3)
+// result.quotient == 3, result.remainder == 1
+
+4. advanced(by:)  
+    • 특정 값만큼 더한 값을 반환 (Index, Int, Date 등)  
+    `5.advanced(by: 3) // 8`
+    
+5. distance(to:)  
+    • 두 수(혹은 Index 등)의 거리 계산  
+    `5.distance(to: 10) // 5`
+    
+
+✅ 컬렉션 관련 연산 메서드
+
+6. contains(_:)  
+    • 특정 요소가 있는지 검사  
+    `[1, 2, 3].contains(2) // true`
+    
+7. firstIndex(of:), lastIndex(of:)  
+    • 특정 요소의 인덱스를 반환  
+    `["a", "b", "c"].firstIndex(of: "b") // 1`
+    
+8. starts(with:), ends(with:)  
+    • 특정 패턴으로 시작하거나 끝나는지  
+    `[1, 2, 3].starts(with: [1, 2]) // true`
+    
+
+✅ 문자열 관련
+
+9. hasPrefix(_:), hasSuffix(_:)  
+    • 문자열이 특정 접두어나 접미어를 갖는지  
+    `"SwiftUI".hasPrefix("Swift") // true`
+    
+10. localizedStandardContains(_:)  
+    • 대소문자 구분 없이 포함 여부 검색  
+    `"Hello World".localizedStandardContains("world") // true`
+    
+
+✅ 비교 및 판별 관련
+
+12. clamped(to:)  
+    • 범위 내로 값을 제한  
+    `let value = 15.clamped(to: 0...10) // 10`
+    
+13. signum()  
+    • 수의 부호를 반환 (-1, 0, 1 중 하나)  
+    `(-5).signum() // -1`
+
+---
+Q. isMultiple(of:)은 부동소수점(Float, Double)에도 사용할 수 있어요?
+A. 아니요. isMultiple(of:)는 BinaryInteger 타입(Int 등) 전용이에요. 실수에는 truncatingRemainder(dividingBy:)를 사용하세요.
+
+---
+isMultiple(of: )로 짝수, 홀수 판별식을 만들 수 있음.
+extension Int {
+    var isEven: Bool { self.isMultiple(of: 2) }
+    var isOdd: Bool { !isEven }
+}
+
+---
+isMultiple(of:이 %보다 나은 경우:  
+가독성과 정확성. isMultiple(of:)는 명확한 의도를 전달하고, 음수 처리도 직관적.
