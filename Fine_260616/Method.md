@@ -18,12 +18,12 @@
             struct         class          enum
 
 예) 함수
-func greet(name: String) {
+```func greet(name: String) {
     print("안녕, \(name)!")
 }
-
+```
 예) 메서드
-struct Person {
+```struct Person {
     var name: String
 
     // 이건 메서드예요!
@@ -31,6 +31,7 @@ struct Person {
         print("안녕, 나는 \(name)이야!")
     }
 }
+```
 * person이라는 타입(구조체) 안에 있음.
 * person이라는 자료형에 소속된 함수 => 메서드
 
@@ -64,19 +65,19 @@ struct Person {
 |반환(return)|메서드가 계산하고 돌려주는 결과 값 (선택)|
 
 예1) 기본 구조
-func sayHello() {
+```func sayHello() {
     print("안녕!")
 }
-
+```
 예2) 매개변수가 있는 Method
-**struct** ContentView: View {
+```struct ContentView: View {
     // 메서드 정의: 이름을 받아 인사 출력
-    **func** greet(name: String) {
+    func greet(name: String) {
         print("안녕, \(name)!")
     }
 
     // 화면 그리는 부분
-    **var** body: **some** View {
+    var body: some View {
         VStack(spacing: 20) {
             Button("Say Hello") {
                 greet(name: "지민") // 콘솔에 "안녕, 지민!" 출력됨
@@ -85,28 +86,28 @@ func sayHello() {
         .padding()
     }
 }
-
+```
 예3) 값을 돌려주는(return) Method
-**struct** ContentView: View {
- **func** add(a: Int, b: Int) -> Int {
-     **return** a + b
+```struct ContentView: View {
+ func add(a: Int, b: Int) -> Int {
+     return a + b
  }
 
     // 화면 그리는 부분
-    **var** body: **some** View {
+    var body: some View {
         VStack(spacing: 20) {
             Button("Add Numbers") {
-             **let** result = add(a: 3, b: 5)
+             let result = add(a: 3, b: 5)
              print("결과는 \(result)입니다.")// 콘솔에 "결과는 8입니다." 출력됨
             }
         }
         .padding()
     }
 }
-
+```
 예4) swiftUI 뷰 안에서 Method 사용
 	버튼을 눌러서 점수를 올리는 메서드
-struct ScoreView: View {
+```struct ScoreView: View {
     @State private var score = 0
 
     func increaseScore() {
