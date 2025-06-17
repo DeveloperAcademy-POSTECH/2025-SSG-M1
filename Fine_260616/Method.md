@@ -361,6 +361,6 @@ extension Int {
     var isOdd: Bool { !isEven }
 }
 
----
+
 isMultiple(of:이 %보다 나은 경우:  
 가독성과 정확성. isMultiple(of:)는 명확한 의도를 전달하고, 음수 처리도 직관적.
