@@ -1,5 +1,5 @@
 1. **==할당 연산자==**
-= 값 할당 (예: a - b)
+= 값 할당 (예: a = b)
 += 복합 할당 연산자 (예: a += 5 는 a = a +5 와 동일)
 -=
 \*=
@@ -123,16 +123,23 @@ print(String(result, radix: 2))
 :비트를 왼쪽으로 지정된 횟수만큼 이동시킵니다. 오른쪽에는 0이 채워집니다. 숫자를 2의 n승만큼 곱하는 효과가 있습니다.
 
 ```
-let num: UInt8 = 0b00001111 // 10진수 15 let shifted = num << 2  // 0b00111100 // 10진수 60 (15 * 2^2)print(String(shifted, radix: 2))
+let num: UInt8 = 0b00001111 // 10진수 15 
+let shifted = num << 2  // 0b00111100 // 10진수 60 (15 * 2^2)
+print(String(shifted, radix: 2))
 ```
 
 \>> 오른쪽 비트 시프트 연산자
 :비트를 오른쪽으로 지정된 횟수만큼 이동시킵니다. 양수의 경우 왼쪽에는 0이 채워집니다. 숫자를 2의 n승만큼 나누는 효과가 있습니다.
 
 ```
-let num: UInt8 = 0b00001111 // 10진수 15 let shifted = num << 2  // 0b00111100 // 10진수 60 (15 * 2^2)print(String(shifted, radix: 2))
+let num: UInt8 = 0b00001111 // 10진수 15 
+let shifted = num << 2  // 0b00111100 // 10진수 60 (15 * 2^2)
+print(String(shifted, radix: 2))
 
-// 음수의 경우 (Int 타입) let negativeNum: Int8 = -16 // 0b11110000 (2의 보수 표현) let shiftedNegative = negativeNum >> 2 // -4 (0b11111100) print(shiftedNegative)
+// 음수의 경우 (Int 타입) 
+let negativeNum: Int8 = -16 // 0b11110000 (2의 보수 표현) 
+let shiftedNegative = negativeNum >> 2 // -4 (0b11111100) 
+print(shiftedNegative)
 ```
 
 **==7.기타 연산자**==
