@@ -31,7 +31,7 @@
 ---
 
 ##### **원소를 제거하는 메서드 (.remove)
-- **arrayName배열 안에 22라는 제거한다.
+- **arrayName배열 안에 22라는 제거한다. (첫번째로 나오는 22만 지움)
 	- `arrayName.remove(22)
 - **arrayName배열 안에 0번 인덱스에 해당하는 원소를 제거한다.
 	- `arrayName.remove(at: 0)
@@ -82,6 +82,10 @@
 - **arrayName배열 안의 원소들을 인덱스 순서대로 호출한다.
 	- `for item in arrayName{}`
 - **.enumerated는 원소의 값과 함께 인덱스도 출력하게 해준다. (ex. index: 0: 22)
-	- `for (index, value) in arrayName.enumerated() {}`
+	- `for (index, value) in arrayName.enumerated() {}
+	- 
+- .enumerated를 사용하지 않고 원소의 값과 인덱스를 출력하는 방법
+	```let items = ["apple", "banana", "cherry"]
 
----
+	for (index, value) in zip(items.indices, items) {
+    print("index: \(index), value: \(value)")}
