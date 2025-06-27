@@ -1,7 +1,7 @@
 # 2. [How to join strings together](https://www.hackingwithswift.com/quick-start/beginners/how-to-join-strings-together)
 
-"+" 기호를 사용하거나 string interpolation(문자보간) 사용 
-1) + 기호 사용
+* "+" 기호를 사용하거나 string interpolation(문자보간) 사용 
+## 1. + 기호 사용
 ```swift
 let firstPart = "Hello, "
 let secondPart = "world!"
@@ -26,7 +26,8 @@ let luggageCode = "1" + "2" + "3" + "4" + "5"
 "1" + "2" => "12" + "3" => "123" + "4" => "1234" + "5" => "12345"
 코드가 끝날 때까지 12, 123, 1234를 모두 가지고 있음 (사용되지 않는데도).
 
-2) string interpolation: \() 
+## 2. string interpolation: \() 
+  
   - 효율적. 문자와 정수/소수 등의 결합이 자유로움.
 ```swift
 let name = "Taylor"
