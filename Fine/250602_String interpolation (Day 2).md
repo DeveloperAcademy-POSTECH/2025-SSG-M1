@@ -5,13 +5,8 @@
 ```swift
 let firstPart = "Hello, "
 let secondPart = "world!"
-<<<<<<< Updated upstream
-let greeting = firstPart + secondPart // Hello, world!
-``` 
-=======
 let greeting = firstPart + secondPart
 ``` // Hello, world!
->>>>>>> Stashed changes
 
 ```swift
 let people = "Haters"
@@ -19,18 +14,6 @@ let action = "hate"
 let lyric = people + " gonna " + action
 print(lyric)
 ```
-<<<<<<< Updated upstream
-
-* operator overloading: 한 operator가 어떻게 사용되는가에 따라 다른 의미를 갖는 것.
-	예) +: string + string => string 연결
-	정수나, 소수에서 사용되면 값을 더함.
-
-* "+" 기호 사용은 비효율적
-```swift
-let luggageCode = "1" + "2" + "3" + "4" + "5"
-```
-
-=======
 operator overloading: 한 operator가 어떻게 사용되는가에 따라 다른 의미를 갖는 것.
 예) +: string + string => string 연결
 정수나, 소수에서 사용되면 값을 더함.
@@ -39,16 +22,11 @@ operator overloading: 한 operator가 어떻게 사용되는가에 따라 다른
 ```swift
 let luggageCode = "1" + "2" + "3" + "4" + "5"
 ```
->>>>>>> Stashed changes
 한 번에 12345로 가지 못함.
 "1" + "2" => "12" + "3" => "123" + "4" => "1234" + "5" => "12345"
 코드가 끝날 때까지 12, 123, 1234를 모두 가지고 있음 (사용되지 않는데도).
 
-<<<<<<< Updated upstream
-## 2. string interpolation: \()
-=======
 ## 2. string interpolation: \() 
->>>>>>> Stashed changes
   
   - 효율적. 문자와 정수/소수 등의 결합이 자유로움.
 ```swift
@@ -62,13 +40,8 @@ print(message)
 let number = 11
 let missionMessage = "Apollo " + number + " landed on the moon." // error
 ```
-<<<<<<< Updated upstream
-"+" 기호로 문자를 결합할 때는 문자와 숫자를 결합하지 못함. 숫자를 문자로 바꿔줘야 함.
-
-=======
 
 "+" 기호로 문자를 결합할 때는 문자와 숫자를 결합하지 못함. 숫자를 문자로 바꿔줘야 함.
->>>>>>> Stashed changes
 ```swift
 let missionMessage = "Apollo " + String(number) + " landed on the moon."
 ```
@@ -89,11 +62,7 @@ print("5 x 5 is \(5 * 5)") // 5 x 5 is 25
 var city = "Cardiff" // 사용자에게 입력받은 값
 var message = "Welcome to \(city)!" // 사용자에게 입력받은 값을 처리
 ```
-<<<<<<< Updated upstream
----
-=======
 
->>>>>>> Stashed changes
 # 3. [Summary: Simple data](https://www.hackingwithswift.com/quick-start/beginners/summary-simple-data)
 
 * 상수는 let, 변수는 var
