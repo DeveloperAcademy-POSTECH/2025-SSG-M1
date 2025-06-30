@@ -71,7 +71,7 @@ format(number: 32)
 **틀린 내용 (False) 예시:**
 
 ```
-func walkDogs(destination: String) {
+func walkDogs(to destination: String) {
     print("Let's go for a walk to \(destination).")
 }
 
@@ -96,7 +96,7 @@ Swift는 매개변수 레이블을 제어하는 두 가지 주요 방법을 제�
 - **2. 외부 및 내부 매개변수 이름 분리:**
     - 외부 매개변수 이름이 호출 지점에서 자연스럽게 읽히면서도, 함수 내부에서는 다른 이름으로 사용하고 싶을 때 사용합니다.
     - `externalName internalName: Type` 형식으로 매개변수를 정의합니다.
-    - **예시:** `printTimesTables(number: Int)` 대신 `printTimesTables(for number: Int)`로 정의할 수 있습니다.
+    - **예시:** `printTimesTables(number: Int)` 대신 `func rintTimesTables(for number: Int)`로 정의할 수 있습니다.
         - 호출 시에는 `printTimesTables(for: 5)`처럼 외부 이름 `for`를 사용합니다.
         - 함수 내부에서는 `for` 대신 `number`라는 내부 이름을 사용하여 코드를 작성합니다.
         - `for`와 같은 키워드는 외부 이름으로는 허용되지만, 함수 내부에서는 키워드로 사용될 수 없기 때문에 이 방식이 유용합니다.
@@ -140,7 +140,7 @@ Swift는 매개변수 레이블을 제어하는 두 가지 주요 방법을 제�
 func processUserData(username: String, age: Int) {
     if username.isEmpty {
         print("오류: 사용자 이름이 비어 있습니다. 처리를 중단합니다.")
-        return // 함수 즉시 종료 [1, 8]
+        return
     }
 
     if age < 0 {
